@@ -2,6 +2,8 @@
 
 Upload research papers, ask questions about them, and get answers grounded in the source text with citations back to the exact passage. Built as a portfolio project demonstrating full-stack fundamentals (React/TypeScript, Python/FastAPI, PostgreSQL, Docker, CI/CD) with a genuinely agentic RAG layer on top — not a single-LLM-call demo.
 
+**Live demo:** [docsage.vercel.app](https://docsage.vercel.app/) (frontend only — backend isn't deployed yet)
+
 **Status:** Phase 0 — foundations. This is currently an empty-but-running skeleton: no RAG, no chat, no auth yet.
 
 **Planned future modes** (built one at a time, after the research-paper assistant is complete): a legal consulting-agreement reviewer, and a technical-documentation Q&A tool. Same underlying RAG/agent engine, different document domain and prompting.
@@ -65,7 +67,7 @@ uvicorn app.main:app --reload
 
 ## Roadmap
 
-- [x] **Phase 0 — Foundations:** repo, README, license, Next.js shell, FastAPI shell + health check, docker-compose
+- [x] **Phase 0 — Foundations:** repo, README, license, Next.js shell, FastAPI shell + health check, docker-compose, frontend deployed to Vercel
 - [ ] **Phase 1 — Document Ingestion:** upload/parse, PostgreSQL schema, REST endpoints
 - [ ] **Phase 2 — RAG Pipeline:** chunking, embeddings in Chroma, retrieval, cited answers
 - [ ] **Phase 3 — Agentic Layer:** multi-step agent loop (re-retrieve on low confidence, compare across documents)
